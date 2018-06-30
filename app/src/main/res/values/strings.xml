@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Track Yo Drank v3</string>
+    <string name="InfoText">INFO!\nWelcome to Track Yo Drank v3\nThe following is some very
+     important information regarding alcohol consumption:</string>
+    <string name="warningText">This app can calculate a good estimate of your BAC, but your actual
+     BAC will vary depending on several factors such as hydration, meals, kidney function, and several
+    others.  The chart below was used to create the warnings on the Tracking Page.  By using this
+    app, you agree to assume responsibility for your actions while inebreated and will not hold
+    Track Yo Drank and its creators responsible for the consequences of your actions.</string>
+    <string name="bacChartTitle">BAC Chart Values</string>
+    <string name="bacChartValues">0.00 - 0.03% -> Normal behavior, no impairment
+    \n0.03 - 0.06% -> Mild euphoria and impairment, decreased inhibitions
+    \n0.06 - 0.10% -> Buzzed, euphoric, increased impairment
+    \n0.10 - 0.20% -> Drunk, emotional swings, slurred speech, nausea, loss of motor functions and
+    reaction time
+    \n0.20 - 0.30% -> Confused, nauseated, poor mentation, blackout
+    \n0.30 - 0.40% -> Possible unconscious, unarrousable, loss of bladder function, risk of death
+    \nAbove 0.40%  -> Unconscious, coma, impaired breathing, risk of death</string>
+    <string name="notesTitle">Important Notes</string>
+    <string name="notesContent">- Everyone is different, BAC calculators are merely an estimate.
+      A breathalyzer or blood test is the only way to have an accurate measurement.
+    \n- This app assumes the legal limir for driving is 0.008% and 21 years old.  Please note
+     that the legal limit for driving may vary depending on state or country.
+    \n- Calculations and notes compiled from WikiHow, celcticKane.com, and the U.S. Department of
+    Transportation.</string>
+    <string name="standardDrinkTitle">Standard Drink Sizes</string>
+    <string name="standardDrinks" >-The standard drink size of a 40% alcohol drink such as gin or
+     whiskey is ~1.5 oz.\n-Standard drink size of a 12% alcohol wine is 5 oz.\n-The standard drink
+    size of a 5% alcohol beer is 12 oz.\n-A standard drink contains about 14 g of alcohol.</string>
+    <string-array name="dranksArray">
+        <item>Beer (5% alcohol - Std. Drink Size = 12 oz.)</item>
+        <item>Wine (12% alcohol - Std. Drink Size = 5oz.)</item>
+        <item>Hard Alcohol (40% alcohol - Std. Drink Size = 1.5 oz.)</item>
+    </string-array>
+</resources>

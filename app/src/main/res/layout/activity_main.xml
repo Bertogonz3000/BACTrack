@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="com.example.bgonz.trackyodrankv3.MainActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+    <LinearLayout
+        android:id="@+id/homePageLayout"
+        android:layout_width="368dp"
+        android:layout_height="439dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Track Yo Drank v3!"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/exasperation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is my THIRD FUCKING ATTEMPT at this app...all for RADIOBUTTONS"
+            android:textAlignment="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/sexText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please select your biological sex:"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/sexGroup"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/maleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="sexClick"
+                android:text="Male"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/femaleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="sexClick"
+                android:text="Female"
+                android:visibility="visible" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/weightGroup"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Will you be providing your weight in pounds or kg?"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/poundsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="weightClick"
+                android:text="Pounds"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/kilogramsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="weightClick"
+                android:text="Kilograms"
+                android:visibility="visible" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/weightEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Weight"
+            android:inputType="number"
+            android:onClick="weightEditClick"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trackPageLayout"
+        android:layout_width="368dp"
+        android:layout_height="439dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Button
+            android:id="@+id/drankButton"
+            android:layout_width="141dp"
+            android:layout_height="141dp"
+            android:layout_gravity="center"
+            android:onClick="drank"
+            android:text="Drank!" />
+
+        <TextView
+            android:id="@+id/drankNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="drank"
+            android:text="# of Drinks!" />
+
+        <Spinner
+            android:id="@+id/drankSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="calculate"
+            android:text="Calculate BAC" />
+
+        <TextView
+            android:id="@+id/bacView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BAC" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/infoPageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="440dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/InfoText"
+            android:textAlignment="center" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/disclaimerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disclaimer"
+                    android:textAlignment="center" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:id="@+id/standardDrinkTitleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/standardDrinkTitle"
+                    android:textAlignment="center" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <TextView
+                    android:id="@+id/standardDrinkView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/standardDrinks" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <TextView
+                    android:id="@+id/warningTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/warningText" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:id="@+id/bacTitleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bacChartTitle"
+                    android:textAlignment="center" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp" />
+
+                <TextView
+                    android:id="@+id/bacChartView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bacChartValues" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp" />
+
+                <TextView
+                    android:id="@+id/noteTitleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notesTitle"
+                    android:textAlignment="center" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/notesContentView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notesContent" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
